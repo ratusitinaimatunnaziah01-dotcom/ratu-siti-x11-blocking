@@ -1,0 +1,84 @@
+import turtle
+
+# Pengaturan layar
+screen = turtle.Screen()
+screen.title("Pola Bangun Datar")
+t = turtle.Turtle()
+t.speed(5)
+t.width(2)
+
+def gambar_persegi(sisi, warna):
+    t.fillcolor(warna)
+    t.begin_fill()
+    for _ in range(4):
+        t.forward(sisi)
+        t.left(90)
+    t.end_fill()
+
+def gambar_segitiga(sisi, warna):
+    t.fillcolor(warna)
+    t.begin_fill()
+    for _ in range(3):
+        t.forward(sisi)
+        t.left(120)
+    t.end_fill()
+
+def gambar_trapesium(sisi, warna):
+    t.fillcolor(warna)
+    t.begin_fill()
+    t.forward(sisi)      # Sisi bawah
+    t.left(120)
+    t.forward(sisi/2)    # Sisi miring kiri
+    t.left(60)
+    t.forward(sisi/2)    # Sisi atas
+    t.left(60)
+    t.forward(sisi/2)    # Sisi miring kanan
+    t.setheading(0)      # Reset arah ke kanan
+    t.end_fill()
+
+def gambar_jajargenjang(sisi, warna):
+    t.fillcolor(warna)
+    t.begin_fill()
+    for _ in range(2):
+        t.forward(sisi)
+        t.left(60)
+        t.forward(sisi/2)
+        t.left(120)
+    t.end_fill()
+
+def gambar_segilima(sisi, warna):
+    t.fillcolor(warna)
+    t.begin_fill()
+    for _ in range(5):
+        t.forward(sisi)
+        t.left(72)
+    t.end_fill()
+
+def pindah(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+
+# 1. Persegi (Merah)
+pindah(-250, 0)
+gambar_persegi(80, "red")
+
+# 2. Segitiga (Kuning)
+pindah(-140, 0)
+gambar_segitiga(90, "yellow")
+
+# 3. Trapesium (Hijau)
+pindah(-20, 0)
+gambar_trapesium(100, "green")
+
+# 4. Jajar Genjang (Biru)
+pindah(100, 0)
+gambar_jajargenjang(90, "blue")
+
+# 5. Segilima (Ungu)
+pindah(220, 0)
+gambar_segilima(70, "purple")
+
+# Menyelesaikan gambar
+t.hideturtle()
+screen.mainloop()

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bangun Datar</title>
+<style>
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
+}
+
+.persegi-panjang {
+  width: 200px;
+  height: 120px;
+  background: lightblue;
+  border: 2px solid black;
+}
+
+.segitiga {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid orange;
+}
+
+.trapezium {
+  width: 200px;
+  height: 0;
+  border-bottom: 120px solid green;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
+.jajar-genjang {
+  width: 200px;
+  height: 120px;
+  background: pink;
+  transform: skew(20deg);
+  border: 2px solid black;
+}
+
+.belah-ketupat {
+  width: 150px;
+  height: 150px;
+  background: purple;
+  transform: rotate(45deg);
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+
+<div class="persegi-panjang"></div>
+<div class="segitiga"></div>
+<div class="trapezium"></div>
+<div class="jajar-genjang"></div>
+<div class="belah-ketupat"></div>
+
+</body>
+</html>
